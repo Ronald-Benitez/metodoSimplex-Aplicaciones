@@ -51,14 +51,14 @@ $matriz2 = array();
 for($i = 0; $i<$num_variables; $i++){
     $fila = array();
     for($j = 0; $j<$num_variables; $j++){
-        array_push($fila, new num_hungaro($_POST['valor_hungaro'.$i.$j], false, false));
-        $matriz2[$i][$j] =$_POST['valor_hungaro'.$i.$j];
+        array_push($fila, new num_hungaro($_POST['valor'.$i.$j], false, false));
+        $matriz2[$i][$j] =$_POST['valor'.$i.$j];
     }
     array_push($matriz, $fila);
     
 }
 
-if($_POST['tipo']==2){
+if($_POST['tipo']==1){
     $matriz= minimizar($matriz);
 }
 
